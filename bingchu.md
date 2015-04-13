@@ -19,7 +19,7 @@ User 用户
 --------
 
 |   接口   | 路径 | 请求参数 | 备注 |
- --------- | --- | --- | ---
+  --- | --- | --- | ---
 | 认证 | /user/authorize | `{uname: "admin", passwd: "1234"}`| |
 | 退出 | /user/logout | `{}`| |
 | 查看 | /user/fetch | `{uname: "admin"}`| 如果无uname参数，则返回用户列表；否则返回指定用户信息 |
@@ -35,7 +35,7 @@ Supplier 供应商
 --------
 
 |   接口   | 路径 | 请求参数 | 备注 |
- --------- | --- | --- | ---
+  --- | --- | --- | ---
 | 查看 | /supplier/fetch | `{id: 1}`| 如果无id参数，则返回供应商列表；否则返回指定供应商信息 |
 | 添加 | /supplier/add | `{name: "张三", contact: "13800000000", address: "Beijing XXX area", relationship: 1, mark: "鸭掌"}`| 需要权限为1的管理员才可操作；参数中name不可为空，其他可选 |
 | 删除 | /supplier/delete | `{id: 1}`| 需要权限为1的管理员才可操作 |
@@ -49,7 +49,7 @@ Client 客户
 --------
 
 |   接口   | 路径 | 请求参数 | 备注 |
- --------- | --- | --- | ---
+  --- | --- | --- | ---
 | 查看 | /client/fetch | `{id: 1}`| 如果无id参数，则返回客户列表；否则返回指定客户信息 |
 | 添加 | /client/add | `{name: "张三", contact: "13800000000", address: "Beijing XXX area", relationship: 1, mark: "新客户"}`| 需要权限为1的管理员才可操作；参数中name不可为空，其他可选 |
 | 删除 | /client/delete | `{id: 1}`| 需要权限为1的管理员才可操作 |
@@ -63,7 +63,7 @@ Stock 库存
 --------
 
 |   接口   | 路径 | 请求参数 | 备注 |
- --------- | --- | --- | ---
+  --- | --- | --- | ---
 | 查看 | /Stock/fetch | `{sid: 1}`| 如果无sid参数，则返回库存列表；否则返回指定品类信息 |
 | 添加 | /Stock/add | `{sid: XYX020, sname: "鲜鱿鱼", unit: "20", quantity: "200"}`| 参数中unit为单件质量，quantity为库存数量；参数中sid必选不可为空，其他可选 |
 | 删除 | /Stock/delete | `{sid: XYX020}`|  |
@@ -80,7 +80,7 @@ Storage 订单
 >入库单接口和出库单接口类似
 
 |   接口   | 路径 | 请求参数 | 备注 |
- --------- | --- | --- | ---
+  --- | --- | --- | ---
 | 获取 | /Storage/fetchIn | `{id: 20150411000001}`| 如果无单号id参数，则返回列表；否则返回指定信息 |
 | 添加 | /Storage/addIn | `{sid: "XYX020", quantity: "100", expectation: "1428938304", supplier: 2 }`| 其中参数sid为品类ID号，其他可选，默认为0或空 |
 | 入库 | /Storage/confirmIn | `{inid: 20150411000001}`|
@@ -90,12 +90,12 @@ Storage 订单
 
 
 |   接口   | 路径 | 请求参数 | 备注 |
- ------ | --- | --- | ---
+ --- | --- | --- | ---
 | 获取 | /Storage/fetchOut | `{id: 20150412000001}`| 如果无单号id参数，则返回列表；否则返回指定信息 |
 | 添加 | /Storage/addOut | `{sid: "XYX020", quantity: "100", expectation: "1428938304", supplier: 2 }`| 其中参数sid为品类ID号，其他可选，默认为0或空 |
 | 出库 | /Storage/confirmOut | `{inid: 20150412000001}`|
 | 作废 | /Storage/discardOut | `{inid: 20150411000001}`|
-| 重置待出库 | /Storage/resetOut | `{inid: 20150411000001}`|
+| 重置 | /Storage/resetOut | `{inid: 20150411000001}`|
 
 
 ----------
