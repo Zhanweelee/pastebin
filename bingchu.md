@@ -84,7 +84,7 @@ Storage 订单
 关于时间参数
 用于存储时间的变量为整数，数值为当前Unix时间戳
 如`1428938304` 对应的时间为`2015/4/13 23:18:24`
-参考资料[http://tool.chinaz.com/Tools/unixtime.aspx]
+[参考资料](http://tool.chinaz.com/Tools/unixtime.aspx)
 ```
 |   接口   | 路径 | 请求参数 | 备注 |
   --- | --- | --- | ---
