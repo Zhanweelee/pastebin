@@ -81,19 +81,19 @@ Storage 订单
 
 | 接口 | 路径 | 请求参数 | 备注 |
  --- | --- | --- | ---
-| 获取入库单 | /Storage/fetchIn | `{id: 20150411000001}`| 如果无单号id参数，则返回列表；否则返回指定信息 |
-| 添加入库单 | /Storage/addIn | `{sid: "XYX020", quantity: "100", expectation: "1428938304", supplier: 2 }`| 其中参数sid为品类ID号，其他可选，默认为0或空 |
-| 确认已入库 | /Storage/confirmIn | `{inid: 20150411000001}`|
+| 获取 | /Storage/fetchIn | `{id: 20150411000001}`| 如果无单号id参数，则返回列表；否则返回指定信息 |
+| 添加 | /Storage/addIn | `{sid: "XYX020", quantity: "100", expectation: "1428938304", supplier: 2 }`| 其中参数sid为品类ID号，其他可选，默认为0或空 |
+| 入库 | /Storage/confirmIn | `{inid: 20150411000001}`|
 | 作废 | /Storage/discardIn | `{inid: 20150411000001}`|
-| 重置待入库 | /Storage/resetIn | `{inid: 20150411000001}`|
+| 重置 | /Storage/resetIn | `{inid: 20150411000001}`|
 
 
 
-| 接口 | 路径 | 请求参数 | 备注 |
- --- | --- | --- | ---
-| 获取出库单 | /Storage/fetchOut | `{id: 20150412000001}`| 如果无单号id参数，则返回列表；否则返回指定信息 |
-| 添加出库单 | /Storage/addOut | `{sid: "XYX020", quantity: "100", expectation: "1428938304", supplier: 2 }`| 其中参数sid为品类ID号，其他可选，默认为0或空 |
-| 确认已出库 | /Storage/confirmOut | `{inid: 20150412000001}`|
+|   接口   | 路径 | 请求参数 | 备注 |
+ ------ | --- | --- | ---
+| 获取 | /Storage/fetchOut | `{id: 20150412000001}`| 如果无单号id参数，则返回列表；否则返回指定信息 |
+| 添加 | /Storage/addOut | `{sid: "XYX020", quantity: "100", expectation: "1428938304", supplier: 2 }`| 其中参数sid为品类ID号，其他可选，默认为0或空 |
+| 出库 | /Storage/confirmOut | `{inid: 20150412000001}`|
 | 作废 | /Storage/discardOut | `{inid: 20150411000001}`|
 | 重置待出库 | /Storage/resetOut | `{inid: 20150411000001}`|
 
